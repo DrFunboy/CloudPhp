@@ -3,7 +3,7 @@ require "/../../vendor/autoload.php";
 error_reporting(-1);
 header('Content-Type: text/html; charset=utf-8');
 $data = $_POST;
-if (isset($data["do_but_enter"])) 
+if (isset($data["do_but_enter"]))
 {
 	$file_type = $_FILES ['file_inp']['type'];
 	$file_name = $_FILES ['file_inp']['name'];
@@ -14,8 +14,8 @@ if (isset($data["do_but_enter"]))
 	{
 		$errors[] = 'Файл не выбран';
 	}
-	if (empty($errors)) 
-	{	
+	if (empty($errors))
+	{
 		if(stristr($file_type, 'image') == true)
 		{
 			echo(" <div style='color: #0f0;'>да! </div>");

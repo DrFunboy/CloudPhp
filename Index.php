@@ -17,7 +17,7 @@ require "/../vendor/autoload.php";
 		function formatBytes($size, $precision = 2)
 		{
 		    $base = log($size, 1024);
-		    $suffixes = array('', 'Kb', 'Mb', 'Gb', 'Tb');   
+		    $suffixes = array('', 'Kb', 'Mb', 'Gb', 'Tb');
 
 		    return round(pow(1024, $base - floor($base)), $precision) .' '. $suffixes[floor($base)];
 		}
@@ -42,7 +42,7 @@ require "/../vendor/autoload.php";
 			echo("Максимальный размер файла = ".formatBytes($max_file_size)."<br>");
 		};
 
-		$trash_size = $disk['trash_size'];	
+		$trash_size = $disk['trash_size'];
 		if($trash_size==0)
 		{
 			echo("Размер корзины = 0<br>");
@@ -51,9 +51,9 @@ require "/../vendor/autoload.php";
 		{
 			echo("Размер корзины = ".formatBytes($trash_size)."<br>");
 		};
-		
 
-		$total_space = $disk['total_space'];	
+
+		$total_space = $disk['total_space'];
 		if($total_space==0)
 		{
 			echo("Всего места на диске = 0<br>");
@@ -62,9 +62,9 @@ require "/../vendor/autoload.php";
 		{
 			echo("Всего места на диске = ".formatBytes($total_space)."<br>");
 
-		};	
-		
-		$used_space = $disk['used_space'];		
+		};
+
+		$used_space = $disk['used_space'];
 		if($used_space==0)
 		{
 			echo("Использовано места на диске = 0<br>");
@@ -74,8 +74,8 @@ require "/../vendor/autoload.php";
 			echo("Использовано места на диске = ".formatBytes($used_space)."<br>");
 
 		};
-		
-		$free_space = $disk['free_space'];	
+
+		$free_space = $disk['free_space'];
 		if($free_space==0)
 		{
 			echo("Свободно места на диске = 0<br>");
@@ -83,13 +83,13 @@ require "/../vendor/autoload.php";
 		else
 		{
 			echo("Свободно места на диске = ".formatBytes($free_space)."<br>");
-		};	
-		
+		};
+
 
 		$user = $disk['user'];
 
 		$country = $user['country'];
-		echo("Страна пользователя = ".$country."<br>");
+		echo("Страна пользователя233 = ".$country."<br>");
 
 		$login = $user['login'];
 		echo("Логин пользователя = ".$login."<br>");
