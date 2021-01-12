@@ -26,7 +26,6 @@ if (isset($data["do_but_enter"]))
 
 	$data_sets = file_get_contents("../settings.json");
 	$data_sets = json_decode($data_sets, true);
-	$data_sets = $data_sets['0'];
 	$authtoken = ($data_sets['AuthorizationToken']);
 
 	$client = new Arhitector\Yandex\Client\OAuth($authtoken);
@@ -34,9 +33,6 @@ if (isset($data["do_but_enter"]))
 	$resource = $disk->getResource('disk:/Загрузки/'.$file_name);
 	$resource->upload("../files/". $file_name);
 	$resource->public_url;
-	echo("<pre>");
-	var_dump($resource);
-	echo("</pre>");
 	$load_url = ($resource['file']);
 	echo($load_url);
 	unlink($new_temp. $file_name);
