@@ -16,6 +16,7 @@ require "/../vendor/autoload.php";
 <?
 $data_sets = file_get_contents("settings.json");
 $data_sets = json_decode($data_sets, true);
+var_dump($data_sets);
 $authtoken = ($data_sets['AuthorizationToken']);
 If ($authtoken == "")
 {
@@ -44,7 +45,6 @@ If ($authtoken == "")
 	    $context = stream_context_create($opts);
 	    $result = file_get_contents('https://oauth.yandex.ru/token', false, $context);
 	    $result = json_decode($result);
-
 	    $token = ($result->access_token);
 
 			$data_sets = file_get_contents("settings.json");
